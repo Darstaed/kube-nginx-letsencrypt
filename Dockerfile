@@ -1,8 +1,6 @@
-FROM fedora:24
-MAINTAINER Seth Jennings <sethdjennings@gmail.com>
+FROM fedora:34
 
 RUN dnf install certbot -y && dnf clean all
-RUN mkdir /etc/letsencrypt
 
 CMD ["/entrypoint.sh"]
 
